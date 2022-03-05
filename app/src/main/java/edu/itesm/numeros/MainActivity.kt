@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
 
         if (numerosLista == null) {
 
-            Toast.makeText(this, "estoy dentro del boton", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "error agrega elementos a la lista", Toast.LENGTH_LONG).show()
             return
         }
         lista.add(numerosLista)
