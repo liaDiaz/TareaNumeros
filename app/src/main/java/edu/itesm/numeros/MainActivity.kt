@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
     private fun promedio (lista: MutableList<Int>){
 
         val promedio = lista.average()
-        binding.lista.text = " el promedio es : ${promedio}"
+        binding.lista.text =  "el promedio es ${promedio}"
     }
 
     private fun maximo (lista: MutableList<Int>){
@@ -63,24 +63,18 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "error agrega elementos a la lista", Toast.LENGTH_LONG).show()
         val numeroMaximo = lista.maxOrNull()
 
-        binding.lista.text = "el valor maximo ingresado es: ${numeroMaximo}"
+        binding.lista.text = "el maximo es ${numeroMaximo}"
 
     }
 
-    private fun pares(lista: MutableList<Int>){
+    private fun pares (lista: MutableList<Int>){
+        val listaPares = mutableListOf<Int>()
 
         for(elemento in lista){
-
-            val numero = elemento
-
-           val  par = numero % 2
-
-            if(par == 0 ){
-
-                binding.lista.text = "${par} "
-            }
-
+            if((elemento % 2) == 0 )
+                listaPares.add(elemento)
         }
+        binding.lista.text = "${listaPares}"
 
     }
 }
